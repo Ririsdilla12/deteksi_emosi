@@ -18,9 +18,6 @@ mode = ap.parse_args().mode
 
 # plot akurasi dan kurva kerugian
 def plot_model_history(model_history):
-    """
-    Kurva Akurasi dan Kegagalan Plot dengan model_history
-    """
     fig, axs = plt.subplots(1,2,figsize=(15,5))
     # meringkas riwayat akurasi
     axs[0].plot(range(1,len(model_history.history['accuracy'])+1),model_history.history['accuracy'])
